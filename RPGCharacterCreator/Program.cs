@@ -14,9 +14,11 @@ namespace RPGCharacterCreator
         [STAThread]
         static void Main()
         {
+            var c = new Character();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new RaceClassNameForm());
+            
         }
     }
 }
