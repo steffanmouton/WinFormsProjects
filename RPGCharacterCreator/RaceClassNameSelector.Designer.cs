@@ -52,6 +52,7 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Character Details";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // nameTextbox
             // 
@@ -67,6 +68,7 @@
             this.classDropdown.Name = "classDropdown";
             this.classDropdown.Size = new System.Drawing.Size(121, 21);
             this.classDropdown.TabIndex = 4;
+            this.classDropdown.SelectedIndexChanged += new System.EventHandler(this.classDropdown_SelectedIndexChanged);
             // 
             // raceDropdown
             // 
@@ -75,6 +77,7 @@
             this.raceDropdown.Name = "raceDropdown";
             this.raceDropdown.Size = new System.Drawing.Size(121, 21);
             this.raceDropdown.TabIndex = 3;
+            this.raceDropdown.SelectedIndexChanged += new System.EventHandler(this.raceDropdown_SelectedIndexChanged);
             // 
             // label3
             // 
