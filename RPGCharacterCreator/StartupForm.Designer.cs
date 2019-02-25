@@ -69,6 +69,7 @@
             this.newCharButton.TabIndex = 3;
             this.newCharButton.Text = "New Character";
             this.newCharButton.UseVisualStyleBackColor = true;
+            this.newCharButton.Click += new System.EventHandler(this.newCharButton_Click);
             // 
             // StartupForm
             // 

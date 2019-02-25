@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.nameTextbox = new System.Windows.Forms.TextBox();
+            this.classDropdown = new System.Windows.Forms.ComboBox();
+            this.raceDropdown = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,9 +40,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.nameTextbox);
+            this.groupBox1.Controls.Add(this.classDropdown);
+            this.groupBox1.Controls.Add(this.raceDropdown);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -53,28 +53,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Character Details";
             // 
-            // textBox1
+            // nameTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.nameTextbox.Location = new System.Drawing.Point(48, 89);
+            this.nameTextbox.Name = "nameTextbox";
+            this.nameTextbox.Size = new System.Drawing.Size(100, 20);
+            this.nameTextbox.TabIndex = 5;
             // 
-            // comboBox2
+            // classDropdown
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(48, 50);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 4;
+            this.classDropdown.FormattingEnabled = true;
+            this.classDropdown.Location = new System.Drawing.Point(48, 50);
+            this.classDropdown.Name = "classDropdown";
+            this.classDropdown.Size = new System.Drawing.Size(121, 21);
+            this.classDropdown.TabIndex = 4;
             // 
-            // comboBox1
+            // raceDropdown
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(48, 17);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
+            this.raceDropdown.FormattingEnabled = true;
+            this.raceDropdown.Location = new System.Drawing.Point(48, 17);
+            this.raceDropdown.Name = "raceDropdown";
+            this.raceDropdown.Size = new System.Drawing.Size(121, 21);
+            this.raceDropdown.TabIndex = 3;
             // 
             // label3
             // 
@@ -119,9 +119,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox nameTextbox;
+        private System.Windows.Forms.ComboBox classDropdown;
+        private System.Windows.Forms.ComboBox raceDropdown;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

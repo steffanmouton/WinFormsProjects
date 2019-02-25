@@ -17,7 +17,7 @@ namespace RPGCharacterCreator
             var c = new Character();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RaceClassNameForm());
+            Application.Run(new StartupForm());
             
         }
     }

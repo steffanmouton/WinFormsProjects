@@ -16,5 +16,17 @@ namespace RPGCharacterCreator
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Clicking the new character button opens the Race Class Name Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void newCharButton_Click(object sender, EventArgs e)
+        {
+            var raceForm = new RaceClassNameForm();
+            raceForm.Show();
+            this.Hide();
+        }
     }
 }

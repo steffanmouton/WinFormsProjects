@@ -9,6 +9,5 @@ namespace RPGCharacterCreator
     class Race
     {
         public string Name { get; set; }
-        
     }
 }
