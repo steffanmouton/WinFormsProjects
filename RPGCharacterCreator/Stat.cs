@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPGCharacterCreator
 {
-    public class Stat
+    class Stat
     {
         private int _statistic;
 

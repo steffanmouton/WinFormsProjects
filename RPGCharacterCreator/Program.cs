@@ -14,9 +14,7 @@ namespace RPGCharacterCreator
         [STAThread]
         static void Main()
         {
-            
-            Character single = Character.Instance;
-            
+            var c = new Character();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new StartupForm());
