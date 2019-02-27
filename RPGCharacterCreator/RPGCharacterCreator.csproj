@@ -50,44 +50,32 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Race.cs" />
-    <Compile Include="RaceClassNameForm.cs">
+    <Compile Include="Form\Window\RaceClassNameForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RaceClassNameForm.Designer.cs">
-      <DependentUpon>RaceClassNameForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RaceClassNameSelector.cs">
+    <Compile Include="Form\Window\RaceClassNameForm.Designer.cs" />
+    <Compile Include="Form\Prefab\RaceClassNameSelector.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RaceClassNameSelector.Designer.cs">
-      <DependentUpon>RaceClassNameSelector.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReviewCharacterForm.cs">
+    <Compile Include="Form\Prefab\RaceClassNameSelector.Designer.cs" />
+    <Compile Include="Form\Window\ReviewCharacterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReviewCharacterForm.Designer.cs">
-      <DependentUpon>ReviewCharacterForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Form\Window\ReviewCharacterForm.Designer.cs" />
     <Compile Include="RPGClass.cs" />
-    <Compile Include="StartupForm.cs">
+    <Compile Include="Form\Window\StartupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartupForm.Designer.cs">
-      <DependentUpon>StartupForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Form\Window\StartupForm.Designer.cs" />
     <Compile Include="Stat.cs" />
-    <Compile Include="StatBlockSelector.cs">
+    <Compile Include="Form\Prefab\StatBlockSelector.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StatBlockSelector.Designer.cs">
-      <DependentUpon>StatBlockSelector.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StatsForm.cs">
+    <Compile Include="Form\Prefab\StatBlockSelector.Designer.cs" />
+    <Compile Include="Form\Window\StatsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StatsForm.Designer.cs">
-      <DependentUpon>StatsForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Form\Window\StatsForm.Designer.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -97,24 +85,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RaceClassNameForm.resx">
-      <DependentUpon>RaceClassNameForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RaceClassNameSelector.resx">
-      <DependentUpon>RaceClassNameSelector.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReviewCharacterForm.resx">
-      <DependentUpon>ReviewCharacterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StartupForm.resx">
-      <DependentUpon>StartupForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StatBlockSelector.resx">
-      <DependentUpon>StatBlockSelector.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StatsForm.resx">
-      <DependentUpon>StatsForm.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Window\RaceClassNameForm.resx" />
+    <EmbeddedResource Include="Form\Prefab\RaceClassNameSelector.resx" />
+    <EmbeddedResource Include="Form\Window\ReviewCharacterForm.resx" />
+    <EmbeddedResource Include="Form\Window\StartupForm.resx" />
+    <EmbeddedResource Include="Form\Prefab\StatBlockSelector.resx" />
+    <EmbeddedResource Include="Form\Window\StatsForm.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

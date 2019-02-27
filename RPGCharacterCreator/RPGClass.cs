@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPGCharacterCreator
 {
-    class RPGClass
+    public class RPGClass
     {
         public string Name { get; set; }
     }
