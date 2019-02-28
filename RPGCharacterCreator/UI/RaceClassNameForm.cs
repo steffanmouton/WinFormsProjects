@@ -17,9 +17,15 @@ namespace RPGCharacterCreator
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void RaceClassNameForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            var statForm = new StatsForm();
+            statForm.Show();
         }
     }
 }

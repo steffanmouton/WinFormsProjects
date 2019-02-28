@@ -6,23 +6,46 @@ using System.Threading.Tasks;
 
 namespace RPGCharacterCreator
 {
-    class Character
+    public sealed class Character
     {
-        public string Name { get; set; }
-        public Race CharRace { get; set; }
-        public RPGClass CharClass { get; set; }
+        //Variable Instance
+        private static Character INSTANCE = new Character();
 
-        IDictionary<string, Stat> StatBlock = new Dictionary<string, Stat>();
-        public Character()
+        // try using ENUM
+        public enum STATNAME { STR = 0, DEX = 1, CON = 2, INT = 3, WIS = 4, CHA = 5 }
+        public IDictionary<string, Stat> StatBlock = new Dictionary<string, Stat>();
+
+        //constructor
+        private Character()
         {
             foreach (var e in Enum.GetValues(typeof(STATNAME)))
             {
                 StatBlock.Add(e.ToString(), new Stat());
             }
+
+            Name = "";
+            CharRace = new RaceType();
+            ClassImplementation = new RPGClass();
+
         }
 
-        // try using ENUM
+        //Property
+        public static Character Instance
+        {
+            get
+            {
+                if (INSTANCE == null)
+                {
+                    INSTANCE = new Character();
+                }
+                return INSTANCE;
+            }
+        }
 
-        public enum STATNAME { STR = 0, DEX = 1, CON = 2, INT = 3, WIS = 4, CHA = 5 }
+        public string Name { get; set; }
+        public RaceType CharRace { get; set; }
+
+        public IClass ClassImplementation { get; set; }
+
     }
 }

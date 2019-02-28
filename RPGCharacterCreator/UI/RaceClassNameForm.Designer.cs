@@ -28,20 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.raceClassNameSelector1 = new RPGCharacterCreator.RaceClassNameSelector();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.nextButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.raceClassNameSelector1 = new RPGCharacterCreator.RaceClassNameSelector();
             this.SuspendLayout();
-            // 
-            // raceClassNameSelector1
-            // 
-            this.raceClassNameSelector1.Location = new System.Drawing.Point(13, 13);
-            this.raceClassNameSelector1.Name = "raceClassNameSelector1";
-            this.raceClassNameSelector1.Size = new System.Drawing.Size(203, 130);
-            this.raceClassNameSelector1.TabIndex = 0;
             // 
             // label1
             // 
@@ -78,6 +71,7 @@
             this.nextButton.TabIndex = 4;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // label4
             // 
@@ -87,6 +81,13 @@
             this.label4.Size = new System.Drawing.Size(128, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Click \'Next\' to go to Stats.";
+            // 
+            // raceClassNameSelector1
+            // 
+            this.raceClassNameSelector1.Location = new System.Drawing.Point(13, 13);
+            this.raceClassNameSelector1.Name = "raceClassNameSelector1";
+            this.raceClassNameSelector1.Size = new System.Drawing.Size(203, 130);
+            this.raceClassNameSelector1.TabIndex = 0;
             // 
             // RaceClassNameForm
             // 
@@ -101,6 +102,7 @@
             this.Controls.Add(this.raceClassNameSelector1);
             this.Name = "RaceClassNameForm";
             this.Text = "RPG Character Creator";
+            this.Load += new System.EventHandler(this.RaceClassNameForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -10,16 +10,22 @@ using System.Windows.Forms;
 
 namespace RPGCharacterCreator
 {
-    public partial class RaceClassNameForm : Form
+    public partial class StatsForm : Form
     {
-        public RaceClassNameForm()
+        public StatsForm()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            var reviewScr = new ReviewCharacterForm();
+            reviewScr.ShowDialog();
+        }
 
+        private void StatsForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

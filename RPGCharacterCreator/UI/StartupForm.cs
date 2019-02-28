@@ -26,7 +26,7 @@ namespace RPGCharacterCreator
         {
             var raceForm = new RaceClassNameForm();
             raceForm.Show();
-            this.Hide();
+            
         }
     }
 }
