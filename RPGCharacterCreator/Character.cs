@@ -24,7 +24,7 @@ namespace RPGCharacterCreator
             }
 
             Name = "";
-            CharRace = new RaceType();
+            CharRace = new Race();
             ClassImplementation = new RPGClass();
 
         }
@@ -43,7 +43,7 @@ namespace RPGCharacterCreator
         }
 
         public string Name { get; set; }
-        public RaceType CharRace { get; set; }
+        public Race CharRace { get; set; }
 
         public IClass ClassImplementation { get; set; }
 

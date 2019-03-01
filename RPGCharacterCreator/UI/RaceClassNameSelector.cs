@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -11,16 +12,7 @@ using System.Windows.Forms;
 namespace RPGCharacterCreator
 {
 
-    public enum RaceType
-    {
-        Human,
-        Elf,
-        Dwarf,
-        Orc,
-        Tiefling,
-        Halfling
-    }
-
+   
     public partial class RaceClassNameSelector : UserControl
     {
         public RaceClassNameSelector()
@@ -29,21 +21,9 @@ namespace RPGCharacterCreator
         }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-            //creates array of race names using the enum declared above, then assigns them all to dropdown selector
-            var races = Enum.GetValues(typeof(RaceType));
-            foreach (var race in races) raceDropdown.Items.Add(race);
+            Program.races.ForEach(r => raceDropdown.Items.Add(r.Name));
 
-            //Creates a list of classes by their IName interface
-            var classes = new List<IClass>
-            {
-                new RPGClass {Name = "Barbarian"}, new RPGClass {Name = "Bard"}, new RPGClass {Name = "Cleric"},
-                new RPGClass {Name = "Druid"},
-                new RPGClass {Name = "Fighter"}, new RPGClass {Name = "Monk"}, new RPGClass {Name = "Paladin"},
-                new RPGClass {Name = "Ranger"},
-                new RPGClass {Name = "Rogue"}, new RPGClass {Name = "Sorcerer"}, new RPGClass {Name = "Warlock"},
-                new RPGClass {Name = "Wizard"}
-            };
-            classes.ForEach(c => classDropdown.Items.Add(c.Name));
+            Program.classes.ForEach(c => classDropdown.Items.Add(c.Name));
         }
 
         private void raceDropdown_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,7 +35,14 @@ namespace RPGCharacterCreator
             if (dropdown != raceDropdown)
                 return;
 
-            Character.Instance.CharRace = (RaceType) dropdown.SelectedItem;
+            foreach (var race in Program.races)
+            {
+                if (dropdown.SelectedItem.ToString() == race.Name)
+                {
+                    Character.Instance.CharRace = race;
+                    return;
+                }
+            }
 
         }
 
@@ -66,10 +53,17 @@ namespace RPGCharacterCreator
             if (dropdown == null)
                 return;
 
-            if (dropdown != raceDropdown)
+            if (dropdown != classDropdown)
                 return;
 
-            Character.Instance.ClassImplementation = dropdown.SelectedItem as IClass;
+            foreach (var thisClass in Program.classes)
+            {
+                if (dropdown.SelectedItem.ToString() == thisClass.Name)
+                {
+                    Character.Instance.ClassImplementation = thisClass;
+                    return;
+                }
+            }
             
         }
 

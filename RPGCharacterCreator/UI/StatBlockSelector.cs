@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace RPGCharacterCreator
 {
+    public delegate void OnStatChanged( object obj);
+    
     public partial class StatBlockSelector : UserControl
     {
+        public static OnStatChanged EventStatChanged;
+
         public StatBlockSelector()
         {
             InitializeComponent();
-            
-            strUpDown.Value
         }
-
-       
-       
+        
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             var strControl = sender as NumericUpDown;
@@ -101,8 +101,8 @@ namespace RPGCharacterCreator
 
         private void StatBlockSelector_Load(object sender, EventArgs e)
         {
-           
             
         }
+        
     }
 }

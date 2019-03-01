@@ -13,7 +13,14 @@ namespace RPGCharacterCreator
         public int StatVal
         {
             get { return _statistic; }
-            set { _statistic = value; }
+            set
+            {
+                _statistic = value;
+
+                //TODO : Add delegates
+                //StatBlockSelector.EventStatChanged.Invoke(this);
+
+            }
         }
 
         public int Mod

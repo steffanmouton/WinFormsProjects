@@ -28,28 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.statBlockSelector1 = new RPGCharacterCreator.StatBlockSelector();
+            this.characterLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.statBlockSelector1 = new RPGCharacterCreator.StatBlockSelector();
             this.SuspendLayout();
             // 
-            // label1
+            // characterLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "NAME, the RACE CLASS ";
-            // 
-            // statBlockSelector1
-            // 
-            this.statBlockSelector1.Location = new System.Drawing.Point(12, 25);
-            this.statBlockSelector1.Name = "statBlockSelector1";
-            this.statBlockSelector1.Size = new System.Drawing.Size(532, 233);
-            this.statBlockSelector1.TabIndex = 1;
+            this.characterLabel.AutoSize = true;
+            this.characterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.characterLabel.Location = new System.Drawing.Point(19, 15);
+            this.characterLabel.Name = "characterLabel";
+            this.characterLabel.Size = new System.Drawing.Size(250, 24);
+            this.characterLabel.TabIndex = 0;
+            this.characterLabel.Text = "NAME, the RACE CLASS ";
             // 
             // button1
             // 
@@ -70,6 +63,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Click \'Next\' to continue to Review.";
             // 
+            // statBlockSelector1
+            // 
+            this.statBlockSelector1.Location = new System.Drawing.Point(12, 46);
+            this.statBlockSelector1.Name = "statBlockSelector1";
+            this.statBlockSelector1.Size = new System.Drawing.Size(532, 233);
+            this.statBlockSelector1.TabIndex = 1;
+            // 
             // StatsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -78,7 +78,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.statBlockSelector1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.characterLabel);
             this.Name = "StatsForm";
             this.Text = "StatsForm";
             this.Load += new System.EventHandler(this.StatsForm_Load);
@@ -89,7 +89,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label characterLabel;
         private StatBlockSelector statBlockSelector1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;

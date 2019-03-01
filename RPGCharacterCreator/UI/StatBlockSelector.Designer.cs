@@ -50,7 +50,6 @@
             this.wisUpDown = new System.Windows.Forms.NumericUpDown();
             this.chaUpDown = new System.Windows.Forms.NumericUpDown();
             this.strUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -85,7 +84,7 @@
             this.groupBox1.Controls.Add(this.wisUpDown);
             this.groupBox1.Controls.Add(this.chaUpDown);
             this.groupBox1.Controls.Add(this.strUpDown);
-            this.groupBox1.Location = new System.Drawing.Point(3, 20);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(134, 191);
             this.groupBox1.TabIndex = 0;
@@ -274,19 +273,10 @@
             this.strUpDown.TabIndex = 1;
             this.strUpDown.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Use the following Stat Block to set your desired Stats.";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Location = new System.Drawing.Point(154, 21);
+            this.groupBox2.Location = new System.Drawing.Point(143, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(375, 190);
             this.groupBox2.TabIndex = 2;
@@ -307,10 +297,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "StatBlockSelector";
-            this.Size = new System.Drawing.Size(533, 214);
+            this.Size = new System.Drawing.Size(524, 200);
             this.Load += new System.EventHandler(this.StatBlockSelector_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -323,7 +312,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -341,7 +329,6 @@
         private System.Windows.Forms.NumericUpDown wisUpDown;
         private System.Windows.Forms.NumericUpDown chaUpDown;
         private System.Windows.Forms.NumericUpDown strUpDown;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label dexMod;
         private System.Windows.Forms.Label wisMod;
         private System.Windows.Forms.Label chaMod;

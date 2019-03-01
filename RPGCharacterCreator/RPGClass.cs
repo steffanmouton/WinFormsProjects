@@ -19,8 +19,10 @@ namespace RPGCharacterCreator
             get => _nameImplementation.Name;
             set => _nameImplementation.Name = value;
         }
-    }
 
+        public string RecStats { get; set; }
+    }
+    
     public class ClassNameGenerator : IClass
     {
         public string Name { get; set; }
