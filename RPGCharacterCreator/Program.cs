@@ -10,6 +10,12 @@ namespace RPGCharacterCreator
 {
     static class Program
     {
+        /// <summary>
+        /// Load function, returns a saved character or creates a new one
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="fileName"></param>
+        /// <returns> Character </returns>
         public static Character Load(Character c, string fileName)
         {
 
@@ -36,6 +42,11 @@ namespace RPGCharacterCreator
             return c;
         }
 
+        /// <summary>
+        /// Save function. Creates a save file for the character or updates it.
+        /// </summary>
+        /// <param name="clicker"></param>
+        /// <param name="fileName"></param>
         public static void Save(Character clicker, string fileName)
         {
 
@@ -50,7 +61,9 @@ namespace RPGCharacterCreator
             new Race {Name = "Dwarf"}, new Race {Name = "Human"}, new Race {Name = "Elf"}
         };
 
-        //Creates a list of classes by their IName interface
+        /// <summary>
+        /// Creates a list of Classes by their IClass interface 
+        /// </summary>
         public static List<IClass> classes = new List<IClass>
         {
             new RPGClass {Name = "Barbarian", RecStats = "STR"}, new RPGClass {Name = "Bard", RecStats = "CHA"},

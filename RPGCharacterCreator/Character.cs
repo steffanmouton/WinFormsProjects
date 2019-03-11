@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Singleton Character for app-wide access
 namespace RPGCharacterCreator
 {
     public sealed class Character
     {
-        //Variable Instance
+        // Variable Instance
         private static Character INSTANCE = new Character();
 
         // try using ENUM

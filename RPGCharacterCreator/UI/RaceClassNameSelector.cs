@@ -11,8 +11,6 @@ using System.Windows.Forms;
 
 namespace RPGCharacterCreator
 {
-
-   
     public partial class RaceClassNameSelector : UserControl
     {
         public RaceClassNameSelector()
@@ -25,7 +23,6 @@ namespace RPGCharacterCreator
 
             Program.classes.ForEach(c => classDropdown.Items.Add(c.Name));
         }
-
         private void raceDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
             var dropdown = sender as ComboBox;
@@ -43,7 +40,6 @@ namespace RPGCharacterCreator
                     return;
                 }
             }
-
         }
 
         private void classDropdown_SelectedIndexChanged(object sender, EventArgs e)
@@ -64,7 +60,6 @@ namespace RPGCharacterCreator
                     return;
                 }
             }
-            
         }
 
         private void nameTextbox_TextChanged(object sender, EventArgs e)

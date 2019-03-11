@@ -23,6 +23,9 @@ namespace RPGCharacterCreator
             }
         }
 
+        /// <summary>
+        /// Property that returns the modifier value of the _statistic value
+        /// </summary>
         public int Mod
         {
             get
@@ -34,8 +37,5 @@ namespace RPGCharacterCreator
                     return (_statistic - 11) / 2;
             }
         }
-        
     }
-
-    
 }
