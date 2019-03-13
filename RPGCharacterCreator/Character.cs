@@ -47,6 +47,12 @@ namespace RPGCharacterCreator
         public Race CharRace { get; set; }
 
         public IClass ClassImplementation { get; set; }
+        
+        public string generateFileName()
+        {
+            string saveFileName = Name += ".txt";
 
+            return saveFileName;
+        }
     }
 }

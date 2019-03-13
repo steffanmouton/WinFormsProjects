@@ -21,7 +21,7 @@ namespace RPGCharacterCreator
         {
             var c = Character.Instance;
             var s = Program.fileName;
-            Program.Save(c, s);
+            //Program.Save(c, s);
 
             var reviewScr = new ReviewCharacterForm();
             reviewScr.ShowDialog();
@@ -29,15 +29,21 @@ namespace RPGCharacterCreator
 
         private void StatsForm_Load(object sender, EventArgs e)
         {
+            // Singleton load
             var c = Character.Instance;
 
+            // Title, updated with character info
+            var charName = c.Name;
+            var raceName = c.CharRace.Name;
+            var className = c.ClassImplementation.Name;
             var append = ", the ";
             var space = " ";
             var t = "";
-            t += c.Name += append += 
-                c.CharRace.Name += space += c.ClassImplementation.Name;
+            t += charName += append += 
+                raceName += space += className;
 
             characterLabel.Text = t;
+            
         }
     }
 }

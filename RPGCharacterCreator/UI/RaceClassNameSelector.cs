@@ -73,5 +73,14 @@ namespace RPGCharacterCreator
 
             Character.Instance.Name = textbox.Text;
         }
+
+        public void UpdateSelectorInfo()
+        {
+            Character c = Character.Instance;
+
+            raceDropdown.Text = c.CharRace.Name;
+            classDropdown.Text = c.ClassImplementation.Name;
+            nameTextbox.Text = c.Name;
+        }
     }
 }

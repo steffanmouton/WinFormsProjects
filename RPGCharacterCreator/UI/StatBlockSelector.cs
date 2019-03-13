@@ -103,6 +103,15 @@ namespace RPGCharacterCreator
         {
             
         }
-        
+
+        public void UpdateStatBlockValues()
+        {
+            strMod.Text = Character.Instance.StatBlock["STR"].Mod.ToString();
+            dexMod.Text = Character.Instance.StatBlock["DEX"].Mod.ToString();
+            conMod.Text = Character.Instance.StatBlock["CON"].Mod.ToString();
+            intMod.Text = Character.Instance.StatBlock["INT"].Mod.ToString();
+            wisMod.Text = Character.Instance.StatBlock["WIS"].Mod.ToString();
+            chaMod.Text = Character.Instance.StatBlock["CHA"].Mod.ToString();
+        }
     }
 }
