@@ -31,12 +31,10 @@ namespace RPGCharacterCreator
 
         private void editExistingButton_Click(object sender, EventArgs e)
         {
+            // TODO: MAKE DIALOG WINDOW WORK
             /*var dialog = new OpenFileDialog();
             dialog.ShowDialog();*/
-            Character c = Character.Instance;
-            c = Program.Load(c, "Steffan.json");
-            var review = new ReviewCharacterForm();
-            review.Show();
+            
         }
     }
 }
