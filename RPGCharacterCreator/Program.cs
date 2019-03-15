@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace RPGCharacterCreator
 {
@@ -19,25 +20,20 @@ namespace RPGCharacterCreator
         public static Character Load(Character c, string fileName)
         {
 
-            var serializer = new XmlSerializer(typeof(Character));
+            /*var serializer = new XmlSerializer(typeof(Character));*/
 
 
             //creates the save file if it does not already exist and sets it up with default serialization.
             if (!File.Exists(fileName))
             {
-                File.Create(fileName).Close();
-
-                var sw = new StreamWriter(fileName);
-                serializer.Serialize(sw, c);
-                sw.Close();
+                return c;
             }
 
             //opens up current savefile as the stream to deserialize
-            Stream stream = File.Open(fileName, FileMode.Open);
+            string input = File.ReadAllText(fileName);
 
             //assigns the referenced clicker with the deserialized stream
-            c = (Character)serializer.Deserialize(stream);
-            stream.Close();
+            c = JsonConvert.DeserializeObject<Character>(input);
 
             return c;
         }
@@ -47,13 +43,16 @@ namespace RPGCharacterCreator
         /// </summary>
         /// <param name="clicker"></param>
         /// <param name="fileName"></param>
-        public static void Save(Character clicker, string fileName)
+        public static void Save(Character c, string fileName)
         {
-
-            var serializer = new XmlSerializer(typeof(Character));
+            /*var serializer = new XmlSerializer(typeof(Character));
             var sw = new StreamWriter(fileName);
             serializer.Serialize(sw, clicker);
-            sw.Close();
+            sw.Close();*/
+            
+            string output = JsonConvert.SerializeObject(c);
+            File.WriteAllText(c.generateFileName(), output);
+
         }
 
         public static List<Race> races = new List<Race>
@@ -82,11 +81,9 @@ namespace RPGCharacterCreator
         [STAThread]
         static void Main()
         {
-            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new StartupForm());
-            
         }
     }
 }

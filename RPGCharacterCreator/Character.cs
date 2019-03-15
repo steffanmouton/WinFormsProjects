@@ -50,7 +50,9 @@ namespace RPGCharacterCreator
         
         public string generateFileName()
         {
-            string saveFileName = Name += ".txt";
+            string tempName = Name;
+
+            string saveFileName = tempName += ".json";
 
             return saveFileName;
         }

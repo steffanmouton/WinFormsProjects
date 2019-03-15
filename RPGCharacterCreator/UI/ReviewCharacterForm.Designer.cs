@@ -31,9 +31,9 @@
             this.charTitle = new System.Windows.Forms.Label();
             this.raceClassNameSelector1 = new RPGCharacterCreator.RaceClassNameSelector();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.exportButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.restartButton = new System.Windows.Forms.Button();
             this.statBlockSelector1 = new RPGCharacterCreator.StatBlockSelector();
             this.SuspendLayout();
             // 
@@ -64,15 +64,15 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Ready to save as Text File?";
             // 
-            // button1
+            // exportButton
             // 
-            this.button1.Location = new System.Drawing.Point(221, 395);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Export";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.exportButton.Location = new System.Drawing.Point(221, 395);
+            this.exportButton.Name = "exportButton";
+            this.exportButton.Size = new System.Drawing.Size(75, 23);
+            this.exportButton.TabIndex = 5;
+            this.exportButton.Text = "Export";
+            this.exportButton.UseVisualStyleBackColor = true;
+            this.exportButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -83,14 +83,15 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Want to start from Scratch?";
             // 
-            // button2
+            // restartButton
             // 
-            this.button2.Location = new System.Drawing.Point(409, 395);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Restart";
-            this.button2.UseVisualStyleBackColor = true;
+            this.restartButton.Location = new System.Drawing.Point(409, 395);
+            this.restartButton.Name = "restartButton";
+            this.restartButton.Size = new System.Drawing.Size(75, 23);
+            this.restartButton.TabIndex = 7;
+            this.restartButton.Text = "Restart";
+            this.restartButton.UseVisualStyleBackColor = true;
+            this.restartButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // statBlockSelector1
             // 
@@ -104,9 +105,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 433);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.restartButton);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.exportButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.raceClassNameSelector1);
             this.Controls.Add(this.statBlockSelector1);
@@ -125,8 +126,8 @@
         private StatBlockSelector statBlockSelector1;
         private RaceClassNameSelector raceClassNameSelector1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button exportButton;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button restartButton;
     }
 }

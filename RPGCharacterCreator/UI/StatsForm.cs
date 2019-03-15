@@ -44,6 +44,7 @@ namespace RPGCharacterCreator
 
             characterLabel.Text = t;
             
+            
         }
     }
 }

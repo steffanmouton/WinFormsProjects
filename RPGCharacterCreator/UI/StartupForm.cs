@@ -28,5 +28,15 @@ namespace RPGCharacterCreator
             raceForm.Show();
             
         }
+
+        private void editExistingButton_Click(object sender, EventArgs e)
+        {
+            /*var dialog = new OpenFileDialog();
+            dialog.ShowDialog();*/
+            Character c = Character.Instance;
+            c = Program.Load(c, "Steffan.json");
+            var review = new ReviewCharacterForm();
+            review.Show();
+        }
     }
 }
