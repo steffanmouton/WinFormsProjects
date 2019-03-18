@@ -17,8 +17,7 @@ namespace RPGCharacterCreator.UI
 
         private FileSelector()
         {
-            defaultFilePath = @"C: \Users\s188045\Documents\GitHub\
-            WinFormsProjects\RPGCharacterCreator\bin\Debug";
+            defaultFilePath = Environment.CurrentDirectory;
         }
 
         public static FileSelector Instance

@@ -10,6 +10,10 @@ namespace RPGCharacterCreator
     {
         private int _statistic;
 
+        public Stat()
+        {
+            _statistic = 10;
+        }
         public int StatVal
         {
             get { return _statistic; }

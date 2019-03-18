@@ -1,14 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using RPGCharacterCreator.UI;
 
 // Singleton Character for app-wide access
 namespace RPGCharacterCreator
 {
     public sealed class Character
     {
+        /// <summary>
+        /// Load function, returns a saved character or creates a new one
+        /// </summary>
+        /// <returns> Character </returns>
+        public void Load()
+        {
+            /*var serializer = new XmlSerializer(typeof(Character));*/
+            var fs = FileSelector.Instance;
+            
+            //creates the save file if it does not already exist and sets it up with default serialization.
+            if (!File.Exists(fs.selectedFilePath))
+            {
+                return;
+            }
+
+            Character load = JsonConvert.DeserializeObject<Character>(fs.selectedFileData);
+            Name = load.Name;
+            CharRace = load.CharRace;
+            ClassImplementation = load.ClassImplementation;
+            StatBlock = load.StatBlock;
+        }
+
+        /// <summary>
+        /// Save function. Creates a save file for the character or updates it.
+        /// </summary>
+        /// <param name="fileName"></param>
+        public void Save(Character c, string fileName)
+        {
+            string output = JsonConvert.SerializeObject(c);
+            File.WriteAllText(c.generateFileName(), output);
+        }
+
+        public void Clear()
+        {
+            Name = "";
+            CharRace = new Race();
+            ClassImplementation = new RPGClass();
+            foreach (var e in StatBlock)
+            {
+                e.Value.StatVal = 10;
+            }
+        }
+
         // Variable Instance
         private static Character INSTANCE = new Character();
 
@@ -39,6 +86,7 @@ namespace RPGCharacterCreator
                 {
                     INSTANCE = new Character();
                 }
+
                 return INSTANCE;
             }
         }

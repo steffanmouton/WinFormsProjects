@@ -39,18 +39,30 @@ namespace RPGCharacterCreator
             var dialog = new OpenFileDialog();
 
             dialog.InitialDirectory = fs.defaultFilePath;
+            dialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
             DialogResult result = dialog.ShowDialog();
 
             if (result == DialogResult.OK)
             {
+                
                 fs.selectedFilePath = dialog.FileName;
                 fs.selectedFileData = File.ReadAllText(fs.selectedFilePath);
+
+                c.Load();
+
+                var reviewForm = new ReviewCharacterForm();
+                reviewForm.Show();
+            }
+            else if (result == DialogResult.Cancel)
+            {
+                dialog.Dispose();
+            }
+            else if (result == DialogResult.Abort)
+            {
+                dialog.Dispose();
             }
 
-            Program.Load();
-
-            var raceForm = new RaceClassNameForm();
-            raceForm.Show();
+            
         }
     }
 }

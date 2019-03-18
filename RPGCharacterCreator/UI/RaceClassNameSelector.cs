@@ -19,9 +19,9 @@ namespace RPGCharacterCreator
         }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-            Program.races.ForEach(r => raceDropdown.Items.Add(r.Name));
+            SourceData.races.ForEach(r => raceDropdown.Items.Add(r.Name));
 
-            Program.classes.ForEach(c => classDropdown.Items.Add(c.Name));
+            SourceData.classes.ForEach(c => classDropdown.Items.Add(c.Name));
         }
         private void raceDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -32,7 +32,7 @@ namespace RPGCharacterCreator
             if (dropdown != raceDropdown)
                 return;
 
-            foreach (var race in Program.races)
+            foreach (var race in SourceData.races)
             {
                 if (dropdown.SelectedItem.ToString() == race.Name)
                 {
@@ -52,7 +52,7 @@ namespace RPGCharacterCreator
             if (dropdown != classDropdown)
                 return;
 
-            foreach (var thisClass in Program.classes)
+            foreach (var thisClass in SourceData.classes)
             {
                 if (dropdown.SelectedItem.ToString() == thisClass.Name)
                 {

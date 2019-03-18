@@ -101,7 +101,7 @@ namespace RPGCharacterCreator
 
         private void StatBlockSelector_Load(object sender, EventArgs e)
         {
-            
+            UpdateStatBlockValues();
         }
 
         public void UpdateStatBlockValues()
@@ -112,6 +112,14 @@ namespace RPGCharacterCreator
             intMod.Text = Character.Instance.StatBlock["INT"].Mod.ToString();
             wisMod.Text = Character.Instance.StatBlock["WIS"].Mod.ToString();
             chaMod.Text = Character.Instance.StatBlock["CHA"].Mod.ToString();
+
+            strUpDown.Text = Character.Instance.StatBlock["STR"].StatVal.ToString();
+            dexUpDown.Text = Character.Instance.StatBlock["DEX"].StatVal.ToString();
+            conUpDown.Text = Character.Instance.StatBlock["CON"].StatVal.ToString();
+            intUpDown.Text = Character.Instance.StatBlock["INT"].StatVal.ToString();
+            wisUpDown.Text = Character.Instance.StatBlock["WIS"].StatVal.ToString();
+            chaUpDown.Text = Character.Instance.StatBlock["CHA"].StatVal.ToString();
         }
+
     }
 }

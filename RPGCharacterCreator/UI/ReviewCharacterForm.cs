@@ -38,17 +38,34 @@ namespace RPGCharacterCreator
             raceClassNameSelector1.UpdateSelectorInfo();
         }
 
+        /// <summary>
+        /// Export the character as a json file, clear the Character singleton,
+        /// return to Startup Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Character c = Character.Instance;
 
-            Program.Save(c, c.generateFileName());
+            c.Save(c, c.generateFileName());
+            c.Clear();
 
+            Program.closeAll();
         }
 
+        /// <summary>
+        /// Restart the app, discarding all data entered and clearing Character
+        /// singleton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
+            var c = Character.Instance;
 
+            c.Clear();
+            Program.closeAll();
         }
     }
 }
