@@ -47,7 +47,7 @@ namespace RPGCharacterCreator
                 fs.selectedFileData = File.ReadAllText(fs.selectedFilePath);
             }
 
-            Program.Load(c, fs.selectedFilePath);
+            Program.Load();
 
             var raceForm = new RaceClassNameForm();
             raceForm.Show();

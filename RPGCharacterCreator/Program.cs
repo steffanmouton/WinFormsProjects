@@ -15,26 +15,22 @@ namespace RPGCharacterCreator
         /// <summary>
         /// Load function, returns a saved character or creates a new one
         /// </summary>
-        /// <param name="c"></param>
-        /// <param name="fileName"></param>
         /// <returns> Character </returns>
-        public static Character Load(Character c, string fileName)
+        public static void Load()
         {
             /*var serializer = new XmlSerializer(typeof(Character));*/
             var fs = FileSelector.Instance;
-            //creates the save file if it does not already exist and sets it up with default serialization.
-            if (!File.Exists(fileName))
-            {
-                return c;
-            }
+            var c = Character.Instance;
 
-            //opens up current savefile as the stream to deserialize
-            string input = File.ReadAllText(fileName);
+            //creates the save file if it does not already exist and sets it up with default serialization.
+            if (!File.Exists(fs.selectedFilePath))
+            {
+                return;
+            }
 
             //assigns the referenced clicker with the deserialized stream
             c = JsonConvert.DeserializeObject<Character>(fs.selectedFileData);
-
-            return c;
+            
         }
 
         /// <summary>
