@@ -43,8 +43,6 @@ namespace RPGCharacterCreator
                 raceName += space += className;
 
             characterLabel.Text = t;
-            
-            
         }
     }
 }

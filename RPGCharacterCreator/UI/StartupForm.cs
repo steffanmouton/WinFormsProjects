@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RPGCharacterCreator.UI;
 
 namespace RPGCharacterCreator
 {
@@ -26,15 +28,29 @@ namespace RPGCharacterCreator
         {
             var raceForm = new RaceClassNameForm();
             raceForm.Show();
-            
         }
 
         private void editExistingButton_Click(object sender, EventArgs e)
         {
             // TODO: MAKE DIALOG WINDOW WORK
-            /*var dialog = new OpenFileDialog();
-            dialog.ShowDialog();*/
+            var c = Character.Instance;
+            var fs = FileSelector.Instance;
             
+            var dialog = new OpenFileDialog();
+
+            dialog.InitialDirectory = fs.defaultFilePath;
+            DialogResult result = dialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                fs.selectedFilePath = dialog.FileName;
+                fs.selectedFileData = File.ReadAllText(fs.selectedFilePath);
+            }
+
+            Program.Load(c, fs.selectedFilePath);
+
+            var raceForm = new RaceClassNameForm();
+            raceForm.Show();
         }
     }
 }

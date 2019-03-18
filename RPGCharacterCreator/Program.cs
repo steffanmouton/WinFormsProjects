@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
+using RPGCharacterCreator.UI;
 
 namespace RPGCharacterCreator
 {
@@ -19,10 +20,8 @@ namespace RPGCharacterCreator
         /// <returns> Character </returns>
         public static Character Load(Character c, string fileName)
         {
-
             /*var serializer = new XmlSerializer(typeof(Character));*/
-
-
+            var fs = FileSelector.Instance;
             //creates the save file if it does not already exist and sets it up with default serialization.
             if (!File.Exists(fileName))
             {
@@ -33,7 +32,7 @@ namespace RPGCharacterCreator
             string input = File.ReadAllText(fileName);
 
             //assigns the referenced clicker with the deserialized stream
-            c = JsonConvert.DeserializeObject<Character>(input);
+            c = JsonConvert.DeserializeObject<Character>(fs.selectedFileData);
 
             return c;
         }
@@ -81,6 +80,7 @@ namespace RPGCharacterCreator
         [STAThread]
         static void Main()
         {
+            var c = Character.Instance;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new StartupForm());
