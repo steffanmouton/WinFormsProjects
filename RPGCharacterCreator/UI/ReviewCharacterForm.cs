@@ -67,5 +67,10 @@ namespace RPGCharacterCreator
             c.Clear();
             Program.closeAll();
         }
+
+        private void raceClassNameSelector1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

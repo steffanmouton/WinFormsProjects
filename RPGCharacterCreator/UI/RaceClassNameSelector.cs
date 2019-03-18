@@ -17,12 +17,7 @@ namespace RPGCharacterCreator
         {
             InitializeComponent();
         }
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-            SourceData.races.ForEach(r => raceDropdown.Items.Add(r.Name));
-
-            SourceData.classes.ForEach(c => classDropdown.Items.Add(c.Name));
-        }
+        
         private void raceDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
             var dropdown = sender as ComboBox;
@@ -78,9 +73,21 @@ namespace RPGCharacterCreator
         {
             Character c = Character.Instance;
 
-            raceDropdown.Text = c.CharRace.Name;
-            classDropdown.Text = c.ClassImplementation.Name;
             nameTextbox.Text = c.Name;
+
+            raceDropdown.SelectedIndex = raceDropdown.FindString(c.CharRace.Name);
+        }
+
+
+        private void RaceClassNameSelector_Load(object sender, EventArgs e)
+        {
+            var character = Character.Instance;
+
+            SourceData.races.ForEach(r => raceDropdown.Items.Add(r.Name));
+            raceDropdown.SelectedIndex = raceDropdown.FindString(character.CharRace.Name);
+
+            SourceData.classes.ForEach(c => classDropdown.Items.Add(c.Name));
+            classDropdown.SelectedIndex = classDropdown.FindString(character.ClassImplementation.Name);
         }
     }
 }

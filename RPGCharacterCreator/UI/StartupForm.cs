@@ -44,7 +44,6 @@ namespace RPGCharacterCreator
 
             if (result == DialogResult.OK)
             {
-                
                 fs.selectedFilePath = dialog.FileName;
                 fs.selectedFileData = File.ReadAllText(fs.selectedFilePath);
 

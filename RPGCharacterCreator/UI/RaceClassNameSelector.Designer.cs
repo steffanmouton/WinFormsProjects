@@ -52,7 +52,7 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Character Details";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            
             // 
             // nameTextbox
             // 
@@ -116,6 +116,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "RaceClassNameSelector";
             this.Size = new System.Drawing.Size(203, 130);
+            this.Load += new System.EventHandler(this.RaceClassNameSelector_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

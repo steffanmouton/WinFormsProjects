@@ -21,7 +21,6 @@ namespace RPGCharacterCreator
             new Race {Name = "Dragonborn"},
             new Race {Name = "Gnome"},
             new Race {Name = "Tiefling"}
-
         };
 
         /// <summary>
