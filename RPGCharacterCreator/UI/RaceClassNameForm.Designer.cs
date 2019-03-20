@@ -102,6 +102,7 @@
             this.Controls.Add(this.raceClassNameSelector1);
             this.Name = "RaceClassNameForm";
             this.Text = "RPG Character Creator";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RaceClassNameForm_FormClosed);
             this.Load += new System.EventHandler(this.RaceClassNameForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

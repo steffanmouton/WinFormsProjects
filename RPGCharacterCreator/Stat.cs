@@ -10,6 +10,10 @@ namespace RPGCharacterCreator
     {
         private int _statistic;
 
+        /// <summary>
+        /// Default constructor of a Statistic value.
+        /// Currently set to 10 for DnD 5e standards.
+        /// </summary>
         public Stat()
         {
             _statistic = 10;
@@ -29,6 +33,7 @@ namespace RPGCharacterCreator
 
         /// <summary>
         /// Property that returns the modifier value of the _statistic value
+        /// Uses DnD 5e formula.
         /// </summary>
         public int Mod
         {

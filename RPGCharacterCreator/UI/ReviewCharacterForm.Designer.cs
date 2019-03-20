@@ -54,7 +54,7 @@
             this.raceClassNameSelector1.Name = "raceClassNameSelector1";
             this.raceClassNameSelector1.Size = new System.Drawing.Size(203, 130);
             this.raceClassNameSelector1.TabIndex = 3;
-            this.raceClassNameSelector1.Load += new System.EventHandler(this.raceClassNameSelector1_Load);
+            
             // 
             // label2
             // 
@@ -115,6 +115,7 @@
             this.Controls.Add(this.charTitle);
             this.Name = "ReviewCharacterForm";
             this.Text = "ReviewCharacterForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ReviewCharacterForm_FormClosed);
             this.Load += new System.EventHandler(this.ReviewCharacterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

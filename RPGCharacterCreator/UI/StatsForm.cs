@@ -19,11 +19,8 @@ namespace RPGCharacterCreator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var c = Character.Instance;
-            var s = Program.fileName;
-            //Program.Save(c, s);
-
             var reviewScr = new ReviewCharacterForm();
+            reviewScr.Owner = this;
             reviewScr.ShowDialog();
         }
 

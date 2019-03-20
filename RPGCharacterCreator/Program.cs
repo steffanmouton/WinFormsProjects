@@ -12,10 +12,22 @@ namespace RPGCharacterCreator
 {
     static class Program
     {
-        
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            var c = Character.Instance;
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new StartupForm());
+        }
 
-        
-
+        /// <summary>
+        /// static method to close all open window Forms down to
+        /// Startup Form
+        /// </summary>
         public static void closeAll()
         {
             FormCollection fc = Application.OpenForms;
@@ -27,20 +39,6 @@ namespace RPGCharacterCreator
                     selectedForm.Close();
                 }
             }
-        }
-
-        public static string fileName = "Character.txt";
-
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            var c = Character.Instance;
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartupForm());
         }
     }
 }
