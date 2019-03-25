@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatBlockSelector));
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.strMod = new System.Windows.Forms.Label();
             this.dexMod = new System.Windows.Forms.Label();
@@ -50,8 +50,7 @@
             this.wisUpDown = new System.Windows.Forms.NumericUpDown();
             this.chaUpDown = new System.Windows.Forms.NumericUpDown();
             this.strUpDown = new System.Windows.Forms.NumericUpDown();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.myToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dexUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conUpDown)).BeginInit();
@@ -59,7 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.wisUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chaUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.strUpDown)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -154,6 +152,7 @@
             this.label9.Size = new System.Drawing.Size(44, 13);
             this.label9.TabIndex = 14;
             this.label9.Text = "Modifier";
+            this.myToolTip.SetToolTip(this.label9, "The value applied to your dice roll on the related skill check.");
             // 
             // label8
             // 
@@ -164,6 +163,7 @@
             this.label8.Size = new System.Drawing.Size(34, 13);
             this.label8.TabIndex = 13;
             this.label8.Text = "Value";
+            this.myToolTip.SetToolTip(this.label8, "The flat value of the skill. Determines the Modifier.");
             // 
             // label7
             // 
@@ -174,6 +174,8 @@
             this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "DEX";
+            this.myToolTip.SetToolTip(this.label7, "Dexterity (DEX) defines speed and agility. The ability to dodge quickly and fire " +
+        "weapons with accuracy.");
             // 
             // label6
             // 
@@ -184,6 +186,8 @@
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "CON";
+            this.myToolTip.SetToolTip(this.label6, "Constitution (CON) defines fortitude. The ability to resist damage and withstand " +
+        "the dangers of the world - poison, weather, sickness.");
             // 
             // label5
             // 
@@ -194,6 +198,8 @@
             this.label5.Size = new System.Drawing.Size(28, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "INT";
+            this.myToolTip.SetToolTip(this.label5, "Intellect (INT) defines knowledge. The amount of information one has gathered and" +
+        " the ability to gather new information and apply it.");
             // 
             // label4
             // 
@@ -204,6 +210,8 @@
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "WIS";
+            this.myToolTip.SetToolTip(this.label4, "Wisdom (WIS) defines one\'s experience. The ability to discern reality and the way" +
+        "s of the world, because you\'ve seen it all before.");
             // 
             // label3
             // 
@@ -214,6 +222,7 @@
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "CHA";
+            this.myToolTip.SetToolTip(this.label3, "Charisma (CHA) defines presence. The ability to influence others with your will.");
             // 
             // label2
             // 
@@ -224,6 +233,7 @@
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "STR";
+            this.myToolTip.SetToolTip(this.label2, "Strength (STR) defines raw physical power. The ability to lift, push, grapple.");
             // 
             // dexUpDown
             // 
@@ -273,33 +283,13 @@
             this.strUpDown.TabIndex = 1;
             this.strUpDown.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Location = new System.Drawing.Point(143, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(375, 190);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Stat Descriptions";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(7, 34);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(357, 143);
-            this.label16.TabIndex = 0;
-            this.label16.Text = resources.GetString("label16.Text");
-            // 
             // StatBlockSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "StatBlockSelector";
-            this.Size = new System.Drawing.Size(524, 200);
+            this.Size = new System.Drawing.Size(142, 200);
             this.Load += new System.EventHandler(this.StatBlockSelector_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -309,8 +299,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.wisUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chaUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.strUpDown)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -338,7 +326,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label strMod;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ToolTip myToolTip;
     }
 }

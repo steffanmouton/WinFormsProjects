@@ -7,8 +7,12 @@ using RPGCharacterCreator.UI;
 // Singleton Character for app-wide access
 namespace RPGCharacterCreator
 {
+    public delegate void OnCharacterNameChanged(Character c);
+    
     public sealed class Character
     {
+        public OnCharacterNameChanged onCharacterChanged;
+
         /// <summary>
         /// Load function, returns a saved character or creates a new one
         /// </summary>
@@ -43,7 +47,7 @@ namespace RPGCharacterCreator
 
         public void Clear()
         {
-            Name = "";
+            Name = null;
             CharRace = new Race();
             ClassImplementation = new RPGClass();
             foreach (var e in StatBlock)
@@ -54,9 +58,11 @@ namespace RPGCharacterCreator
 
         // Variable Instance
         private static Character INSTANCE = new Character();
-
+        
         // try using ENUM
         public enum STATNAME { STR = 0, DEX = 1, CON = 2, INT = 3, WIS = 4, CHA = 5 }
+        
+        //law of demeter respect: dont use the guy to talk to the other guy
         public IDictionary<string, Stat> StatBlock = new Dictionary<string, Stat>();
 
         //constructor
@@ -67,7 +73,7 @@ namespace RPGCharacterCreator
                 StatBlock.Add(e.ToString(), new Stat());
             }
 
-            Name = "";
+            Name = null;
             CharRace = new Race();
             ClassImplementation = new RPGClass();
 
@@ -87,11 +93,40 @@ namespace RPGCharacterCreator
             }
         }
 
-        public string Name { get; set; }
-        public Race CharRace { get; set; }
+        private string _cname;
+        private Race _charRace;
+        private IClass _classImplementation;
 
-        public IClass ClassImplementation { get; set; }
-        
+        public string Name
+        {
+            get { return _cname; }
+            set
+            {
+                _cname = value;
+                onCharacterChanged?.Invoke(this);
+            }
+        }
+
+        public Race CharRace
+        {
+            get => _charRace;
+            set
+            {
+                _charRace = value;
+                onCharacterChanged?.Invoke(this);
+            }
+        }
+
+        public IClass ClassImplementation
+        {
+            get => _classImplementation;
+            set
+            {
+                _classImplementation = value;
+                onCharacterChanged?.Invoke(this);
+            }
+        }
+
         public string generateFileName()
         {
             string tempName = Name;
@@ -99,6 +134,21 @@ namespace RPGCharacterCreator
             string saveFileName = tempName += ".json";
 
             return saveFileName;
+        }
+
+        public string ReturnTitle()
+        {
+            string _cName = "___", _cRace = "___", _cClass = "___";
+
+            if (Name != null)
+                _cName = Name;
+            if (CharRace.Name != null)
+                _cRace = CharRace.Name;
+            if (ClassImplementation.Name != null)
+                _cClass = ClassImplementation.Name;
+
+            var charFullTitle = string.Format("{0}, the {1} {2}", _cName, _cRace, _cClass);
+            return charFullTitle;
         }
     }
 }

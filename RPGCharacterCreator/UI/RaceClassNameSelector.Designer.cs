@@ -28,38 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.components = new System.ComponentModel.Container();
+            this.charDetailsGroupBox = new System.Windows.Forms.GroupBox();
             this.nameTextbox = new System.Windows.Forms.TextBox();
             this.classDropdown = new System.Windows.Forms.ComboBox();
             this.raceDropdown = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.classLabel = new System.Windows.Forms.Label();
+            this.raceLabel = new System.Windows.Forms.Label();
+            this.myToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.charDetailsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // charDetailsGroupBox
             // 
-            this.groupBox1.Controls.Add(this.nameTextbox);
-            this.groupBox1.Controls.Add(this.classDropdown);
-            this.groupBox1.Controls.Add(this.raceDropdown);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(194, 121);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Character Details";
-            
+            this.charDetailsGroupBox.Controls.Add(this.nameTextbox);
+            this.charDetailsGroupBox.Controls.Add(this.classDropdown);
+            this.charDetailsGroupBox.Controls.Add(this.raceDropdown);
+            this.charDetailsGroupBox.Controls.Add(this.nameLabel);
+            this.charDetailsGroupBox.Controls.Add(this.classLabel);
+            this.charDetailsGroupBox.Controls.Add(this.raceLabel);
+            this.charDetailsGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.charDetailsGroupBox.Name = "charDetailsGroupBox";
+            this.charDetailsGroupBox.Size = new System.Drawing.Size(194, 121);
+            this.charDetailsGroupBox.TabIndex = 0;
+            this.charDetailsGroupBox.TabStop = false;
+            this.charDetailsGroupBox.Text = "Character Details";
+            this.myToolTip.SetToolTip(this.charDetailsGroupBox, "Choose your character details below.");
             // 
             // nameTextbox
             // 
             this.nameTextbox.Location = new System.Drawing.Point(48, 89);
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(100, 20);
-            this.nameTextbox.TabIndex = 5;
+            this.nameTextbox.TabIndex = 3;
             this.nameTextbox.TextChanged += new System.EventHandler(this.nameTextbox_TextChanged);
             // 
             // classDropdown
@@ -69,7 +71,7 @@
             this.classDropdown.Location = new System.Drawing.Point(48, 50);
             this.classDropdown.Name = "classDropdown";
             this.classDropdown.Size = new System.Drawing.Size(121, 21);
-            this.classDropdown.TabIndex = 4;
+            this.classDropdown.TabIndex = 2;
             this.classDropdown.SelectedIndexChanged += new System.EventHandler(this.classDropdown_SelectedIndexChanged);
             // 
             // raceDropdown
@@ -79,58 +81,64 @@
             this.raceDropdown.Location = new System.Drawing.Point(48, 17);
             this.raceDropdown.Name = "raceDropdown";
             this.raceDropdown.Size = new System.Drawing.Size(121, 21);
-            this.raceDropdown.TabIndex = 3;
+            this.raceDropdown.TabIndex = 1;
             this.raceDropdown.SelectedIndexChanged += new System.EventHandler(this.raceDropdown_SelectedIndexChanged);
             // 
-            // label3
+            // nameLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 92);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Name";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(7, 92);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(35, 13);
+            this.nameLabel.TabIndex = 2;
+            this.nameLabel.Text = "Name";
+            this.myToolTip.SetToolTip(this.nameLabel, "Your character name. You know what a name is, right?");
             // 
-            // label2
+            // classLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Class";
+            this.classLabel.AutoSize = true;
+            this.classLabel.Location = new System.Drawing.Point(7, 53);
+            this.classLabel.Name = "classLabel";
+            this.classLabel.Size = new System.Drawing.Size(32, 13);
+            this.classLabel.TabIndex = 1;
+            this.classLabel.Text = "Class";
+            this.myToolTip.SetToolTip(this.classLabel, "Choose a class. This determines your skills as a professional adventurer.\r\nYour c" +
+        "ombat abilities and spells in particular are defined by your class.");
             // 
-            // label1
+            // raceLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Race";
+            this.raceLabel.AutoSize = true;
+            this.raceLabel.Location = new System.Drawing.Point(7, 20);
+            this.raceLabel.Name = "raceLabel";
+            this.raceLabel.Size = new System.Drawing.Size(33, 13);
+            this.raceLabel.TabIndex = 0;
+            this.raceLabel.Text = "Race";
+            this.myToolTip.SetToolTip(this.raceLabel, "Choose a character Race. This might define your character background,\r\nrelations " +
+        "to other races, and potentially skill checks.");
             // 
             // RaceClassNameSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.charDetailsGroupBox);
             this.Name = "RaceClassNameSelector";
             this.Size = new System.Drawing.Size(203, 130);
             this.Load += new System.EventHandler(this.RaceClassNameSelector_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.charDetailsGroupBox.ResumeLayout(false);
+            this.charDetailsGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox charDetailsGroupBox;
         private System.Windows.Forms.TextBox nameTextbox;
         private System.Windows.Forms.ComboBox classDropdown;
         private System.Windows.Forms.ComboBox raceDropdown;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label classLabel;
+        private System.Windows.Forms.Label raceLabel;
+        private System.Windows.Forms.ToolTip myToolTip;
     }
 }

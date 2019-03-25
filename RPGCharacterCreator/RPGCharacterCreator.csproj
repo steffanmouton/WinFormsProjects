@@ -56,6 +56,12 @@
     <Compile Include="Race.cs" />
     <Compile Include="FileSelector.cs" />
     <Compile Include="SourceData.cs" />
+    <Compile Include="UI\PrimaryWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PrimaryWindow.Designer.cs">
+      <DependentUpon>PrimaryWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\RaceClassNameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\PrimaryWindow.resx">
+      <DependentUpon>PrimaryWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\RaceClassNameForm.resx">
       <DependentUpon>RaceClassNameForm.cs</DependentUpon>
     </EmbeddedResource>

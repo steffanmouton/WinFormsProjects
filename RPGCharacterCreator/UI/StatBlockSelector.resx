@@ -117,17 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label16.Text" xml:space="preserve">
-    <value>Strength (STR) is the ability to squash a tomato.
-
-Dexterity (DEX) is the ability to throw a tomato accurately.
-
-Constitution (CON) is the ability to eat a rotten tomato and not get sick.
-
-Intelligence (INT) is the ability to know that a tomato is a fruit.
-
-Wisdom (WIS) is the ability to know that tomatos don't belong in fruit salad.
-
-Charisma (CHA) is the ability to sell someone a tomato-based fruit salad.</value>
-  </data>
+  <metadata name="myToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

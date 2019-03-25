@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using RPGCharacterCreator.UI;
 
 namespace RPGCharacterCreator
 {
@@ -14,7 +15,7 @@ namespace RPGCharacterCreator
             var c = Character.Instance;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartupForm());
+            Application.Run(new PrimaryWindow());
         }
 
         /// <summary>
