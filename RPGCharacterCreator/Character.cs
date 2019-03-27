@@ -115,7 +115,7 @@ namespace RPGCharacterCreator
 
         public void Clear()
         {
-            Name = null;
+            Name = "___";
             CharRace = new Race();
             ClassImplementation = new RPGClass();
             foreach (var e in StatBlock) e.Value.StatVal = 10;
@@ -125,7 +125,14 @@ namespace RPGCharacterCreator
         {
             var tempName = Name;
 
-            var saveFileName = string.Format("SavedCharacters/{0}.json", tempName);
+            string invalid = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
+
+            foreach (char c in invalid)
+            {
+                tempName = tempName.Replace(c.ToString(), "_");
+            }
+
+            var saveFileName = string.Format("SavedCharacters\\{0}.json", tempName);
 
             return saveFileName;
         }

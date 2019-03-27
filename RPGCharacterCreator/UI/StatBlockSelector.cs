@@ -3,12 +3,8 @@ using System.Windows.Forms;
 
 namespace RPGCharacterCreator
 {
-    public delegate void OnStatChanged(object obj);
-
     public partial class StatBlockSelector : UserControl
     {
-        public static OnStatChanged EventStatChanged;
-
         public StatBlockSelector()
         {
             InitializeComponent();

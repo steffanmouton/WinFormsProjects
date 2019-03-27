@@ -39,7 +39,7 @@ namespace RPGCharacterCreator.UI
             dialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
             var result = dialog.ShowDialog();
 
-            if (result == DialogResult.OK)
+            if (result == DialogResult.OK) 
             {
                 fs.selectedFilePath = dialog.FileName;
                 fs.selectedFileData = File.ReadAllText(fs.selectedFilePath);
@@ -66,7 +66,7 @@ namespace RPGCharacterCreator.UI
 
         private void exportButton_Click(object sender, EventArgs e)
         {
-            Character.Instance.Save();
+           Character.Instance.Save();
         }
 
         private void exportAsJSONToolStripMenuItem_Click(object sender, EventArgs e)
