@@ -3,8 +3,8 @@ using System.Windows.Forms;
 
 namespace RPGCharacterCreator
 {
-    public delegate void OnStatChanged( object obj);
-    
+    public delegate void OnStatChanged(object obj);
+
     public partial class StatBlockSelector : UserControl
     {
         public static OnStatChanged EventStatChanged;
@@ -13,7 +13,7 @@ namespace RPGCharacterCreator
         {
             InitializeComponent();
         }
-        
+
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             var strControl = sender as NumericUpDown;
@@ -23,7 +23,7 @@ namespace RPGCharacterCreator
             if (strControl != strUpDown)
                 return;
 
-            Character.Instance.StatBlock["STR"].StatVal = (int)strControl.Value;
+            Character.Instance.StatBlock["STR"].StatVal = (int) strControl.Value;
             strMod.Text = Character.Instance.StatBlock["STR"].Mod.ToString();
         }
 
@@ -36,7 +36,7 @@ namespace RPGCharacterCreator
             if (dexControl != dexUpDown)
                 return;
 
-            Character.Instance.StatBlock["DEX"].StatVal = (int)dexControl.Value;
+            Character.Instance.StatBlock["DEX"].StatVal = (int) dexControl.Value;
             dexMod.Text = Character.Instance.StatBlock["DEX"].Mod.ToString();
         }
 
@@ -49,7 +49,7 @@ namespace RPGCharacterCreator
             if (conControl != conUpDown)
                 return;
 
-            Character.Instance.StatBlock["CON"].StatVal = (int)conControl.Value;
+            Character.Instance.StatBlock["CON"].StatVal = (int) conControl.Value;
             conMod.Text = Character.Instance.StatBlock["CON"].Mod.ToString();
         }
 
@@ -62,7 +62,7 @@ namespace RPGCharacterCreator
             if (intControl != intUpDown)
                 return;
 
-            Character.Instance.StatBlock["INT"].StatVal = (int)intControl.Value;
+            Character.Instance.StatBlock["INT"].StatVal = (int) intControl.Value;
             intMod.Text = Character.Instance.StatBlock["INT"].Mod.ToString();
         }
 
@@ -75,7 +75,7 @@ namespace RPGCharacterCreator
             if (wisControl != wisUpDown)
                 return;
 
-            Character.Instance.StatBlock["WIS"].StatVal = (int)wisControl.Value;
+            Character.Instance.StatBlock["WIS"].StatVal = (int) wisControl.Value;
             wisMod.Text = Character.Instance.StatBlock["WIS"].Mod.ToString();
         }
 
@@ -88,7 +88,7 @@ namespace RPGCharacterCreator
             if (chaControl != chaUpDown)
                 return;
 
-            Character.Instance.StatBlock["CHA"].StatVal = (int)chaControl.Value;
+            Character.Instance.StatBlock["CHA"].StatVal = (int) chaControl.Value;
             chaMod.Text = Character.Instance.StatBlock["CHA"].Mod.ToString();
         }
 
@@ -113,6 +113,5 @@ namespace RPGCharacterCreator
             wisUpDown.Text = Character.Instance.StatBlock["WIS"].StatVal.ToString();
             chaUpDown.Text = Character.Instance.StatBlock["CHA"].StatVal.ToString();
         }
-
     }
 }

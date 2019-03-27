@@ -8,76 +8,40 @@ using RPGCharacterCreator.UI;
 namespace RPGCharacterCreator
 {
     public delegate void OnCharacterNameChanged(Character c);
-    
+
     public sealed class Character
     {
-        [NonSerialized]
-        public OnCharacterNameChanged onCharacterChanged;
-
-        /// <summary>
-        /// Load function, returns a saved character or creates a new one
-        /// </summary>
-        /// <returns> Character </returns>
-        public void Load()
+        // try using ENUM
+        public enum STATNAME
         {
-            /*var serializer = new XmlSerializer(typeof(Character));*/
-            var fs = FileSelector.Instance;
-            
-            //creates the save file if it does not already exist and sets it up with default serialization.
-            if (!File.Exists(fs.selectedFilePath))
-            {
-                return;
-            }
-
-            Character load = JsonConvert.DeserializeObject<Character>(fs.selectedFileData);
-            Name = load.Name;
-            CharRace = load.CharRace;
-            ClassImplementation = load.ClassImplementation;
-            StatBlock = load.StatBlock;
-        }
-
-        /// <summary>
-        /// Save function. Creates a save file for the character or updates it.
-        /// </summary>
-        /// <param name="fileName"></param>
-        public void Save()
-        {
-            string output = JsonConvert.SerializeObject(this);
-            File.WriteAllText(this.generateFileName(), output);
-        }
-
-        public void Clear()
-        {
-            Name = null;
-            CharRace = new Race();
-            ClassImplementation = new RPGClass();
-            foreach (var e in StatBlock)
-            {
-                e.Value.StatVal = 10;
-            }
+            STR = 0,
+            DEX = 1,
+            CON = 2,
+            INT = 3,
+            WIS = 4,
+            CHA = 5
         }
 
         // Variable Instance
         private static Character INSTANCE = new Character();
-        
-        // try using ENUM
-        public enum STATNAME { STR = 0, DEX = 1, CON = 2, INT = 3, WIS = 4, CHA = 5 }
-        
+        private Race _charRace;
+        private IClass _classImplementation;
+
+        private string _cname;
+
+        [NonSerialized] public OnCharacterNameChanged onCharacterChanged;
+
         //law of demeter respect: dont use the guy to talk to the other guy
         public IDictionary<string, Stat> StatBlock = new Dictionary<string, Stat>();
 
         //constructor
         private Character()
         {
-            foreach (var e in Enum.GetValues(typeof(STATNAME)))
-            {
-                StatBlock.Add(e.ToString(), new Stat());
-            }
+            foreach (var e in Enum.GetValues(typeof(STATNAME))) StatBlock.Add(e.ToString(), new Stat());
 
             Name = null;
             CharRace = new Race();
             ClassImplementation = new RPGClass();
-
         }
 
         //Property
@@ -85,22 +49,15 @@ namespace RPGCharacterCreator
         {
             get
             {
-                if (INSTANCE == null)
-                {
-                    INSTANCE = new Character();
-                }
+                if (INSTANCE == null) INSTANCE = new Character();
 
                 return INSTANCE;
             }
         }
 
-        private string _cname;
-        private Race _charRace;
-        private IClass _classImplementation;
-
         public string Name
         {
-            get { return _cname; }
+            get => _cname;
             set
             {
                 _cname = value;
@@ -128,11 +85,47 @@ namespace RPGCharacterCreator
             }
         }
 
+        /// <summary>
+        ///     Load function, returns a saved character or creates a new one
+        /// </summary>
+        /// <returns> Character </returns>
+        public void Load()
+        {
+            /*var serializer = new XmlSerializer(typeof(Character));*/
+            var fs = FileSelector.Instance;
+
+            //creates the save file if it does not already exist and sets it up with default serialization.
+            if (!File.Exists(fs.selectedFilePath)) return;
+
+            var load = JsonConvert.DeserializeObject<Character>(fs.selectedFileData);
+            Name = load.Name;
+            CharRace = load.CharRace;
+            ClassImplementation = load.ClassImplementation;
+            StatBlock = load.StatBlock;
+        }
+
+        /// <summary>
+        ///     Save function. Creates a save file for the character or updates it.
+        /// </summary>
+        public void Save()
+        {
+            var output = JsonConvert.SerializeObject(this);
+            File.WriteAllText(generateFileName(), output);
+        }
+
+        public void Clear()
+        {
+            Name = null;
+            CharRace = new Race();
+            ClassImplementation = new RPGClass();
+            foreach (var e in StatBlock) e.Value.StatVal = 10;
+        }
+
         public string generateFileName()
         {
-            string tempName = Name;
+            var tempName = Name;
 
-            string saveFileName = tempName += ".json";
+            var saveFileName = string.Format("SavedCharacters/{0}.json", tempName);
 
             return saveFileName;
         }

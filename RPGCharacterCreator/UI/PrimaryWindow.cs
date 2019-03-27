@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RPGCharacterCreator.UI
@@ -17,14 +10,15 @@ namespace RPGCharacterCreator.UI
         {
             InitializeComponent();
         }
-        
+
         private void PrimaryWindow_Load(object sender, EventArgs e)
         {
             fullCharTitle.Text = Character.Instance.ReturnTitle();
 
-            Character.Instance.onCharacterChanged += title => 
-                { fullCharTitle.Text = Character.Instance.ReturnTitle(); };
-            
+            Character.Instance.onCharacterChanged += title =>
+            {
+                fullCharTitle.Text = Character.Instance.ReturnTitle();
+            };
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,12 +26,10 @@ namespace RPGCharacterCreator.UI
             Character.Instance.Clear();
             raceClassNameSelector1.UpdateSelectorInfo();
             statBlockGroupBox.UpdateStatBlockValues();
-            
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             var c = Character.Instance;
             var fs = FileSelector.Instance;
 
@@ -45,7 +37,7 @@ namespace RPGCharacterCreator.UI
 
             dialog.InitialDirectory = fs.defaultFilePath;
             dialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
-            DialogResult result = dialog.ShowDialog();
+            var result = dialog.ShowDialog();
 
             if (result == DialogResult.OK)
             {

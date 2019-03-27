@@ -2,10 +2,10 @@
 
 namespace RPGCharacterCreator
 {
-    class SourceData
+    internal class SourceData
     {
         /// <summary>
-        /// List of races that can be assigned to Character
+        ///     List of races that can be assigned to Character
         /// </summary>
         public static List<Race> races = new List<Race>
         {
@@ -20,8 +20,8 @@ namespace RPGCharacterCreator
         };
 
         /// <summary>
-        /// List of Classes that can be assigned to Character
-        /// by their IClass interface
+        ///     List of Classes that can be assigned to Character
+        ///     by their IClass interface
         /// </summary>
         public static List<IClass> classes = new List<IClass>
         {
@@ -30,7 +30,7 @@ namespace RPGCharacterCreator
             new RPGClass {Name = "Cleric", RecStats = "WIS & STR(tough)/DEX(quick)"},
             new RPGClass {Name = "Druid", RecStats = "WIS & CON"},
             new RPGClass {Name = "Fighter", RecStats = "STR(beefy warrior)/DEX(fast warrior) & CON"},
-            new RPGClass {Name = "Monk",RecStats = "DEX & WIS"},
+            new RPGClass {Name = "Monk", RecStats = "DEX & WIS"},
             new RPGClass {Name = "Paladin", RecStats = "STR & CHA"},
             new RPGClass {Name = "Ranger", RecStats = "DEX & WIS"},
             new RPGClass {Name = "Rogue", RecStats = "DEX & CHA"},

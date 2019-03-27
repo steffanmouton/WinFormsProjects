@@ -63,7 +63,7 @@
             this.nameTextbox.MaxLength = 32;
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(121, 21);
-            this.nameTextbox.TabIndex = 3;
+            this.nameTextbox.TabIndex = 1;
             this.nameTextbox.TextChanged += new System.EventHandler(this.nameTextbox_TextChanged);
             // 
             // classDropdown
@@ -73,7 +73,7 @@
             this.classDropdown.Location = new System.Drawing.Point(48, 85);
             this.classDropdown.Name = "classDropdown";
             this.classDropdown.Size = new System.Drawing.Size(121, 23);
-            this.classDropdown.TabIndex = 2;
+            this.classDropdown.TabIndex = 3;
             this.classDropdown.SelectedIndexChanged += new System.EventHandler(this.classDropdown_SelectedIndexChanged);
             // 
             // raceDropdown
@@ -83,7 +83,7 @@
             this.raceDropdown.Location = new System.Drawing.Point(48, 52);
             this.raceDropdown.Name = "raceDropdown";
             this.raceDropdown.Size = new System.Drawing.Size(121, 23);
-            this.raceDropdown.TabIndex = 1;
+            this.raceDropdown.TabIndex = 2;
             this.raceDropdown.SelectedIndexChanged += new System.EventHandler(this.raceDropdown_SelectedIndexChanged);
             // 
             // nameLabel
