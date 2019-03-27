@@ -82,19 +82,21 @@
             this.groupBox1.Controls.Add(this.wisUpDown);
             this.groupBox1.Controls.Add(this.chaUpDown);
             this.groupBox1.Controls.Add(this.strUpDown);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(134, 191);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stat Block";
+            this.myToolTip.SetToolTip(this.groupBox1, "Select your Character Statistic values here. ");
             // 
             // strMod
             // 
             this.strMod.AutoSize = true;
             this.strMod.Location = new System.Drawing.Point(96, 36);
             this.strMod.Name = "strMod";
-            this.strMod.Size = new System.Drawing.Size(19, 13);
+            this.strMod.Size = new System.Drawing.Size(24, 17);
             this.strMod.TabIndex = 21;
             this.strMod.Text = "+0";
             // 
@@ -103,7 +105,7 @@
             this.dexMod.AutoSize = true;
             this.dexMod.Location = new System.Drawing.Point(96, 62);
             this.dexMod.Name = "dexMod";
-            this.dexMod.Size = new System.Drawing.Size(19, 13);
+            this.dexMod.Size = new System.Drawing.Size(24, 17);
             this.dexMod.TabIndex = 20;
             this.dexMod.Text = "+0";
             // 
@@ -112,7 +114,7 @@
             this.wisMod.AutoSize = true;
             this.wisMod.Location = new System.Drawing.Point(96, 140);
             this.wisMod.Name = "wisMod";
-            this.wisMod.Size = new System.Drawing.Size(19, 13);
+            this.wisMod.Size = new System.Drawing.Size(24, 17);
             this.wisMod.TabIndex = 19;
             this.wisMod.Text = "+0";
             // 
@@ -121,7 +123,7 @@
             this.chaMod.AutoSize = true;
             this.chaMod.Location = new System.Drawing.Point(96, 166);
             this.chaMod.Name = "chaMod";
-            this.chaMod.Size = new System.Drawing.Size(19, 13);
+            this.chaMod.Size = new System.Drawing.Size(24, 17);
             this.chaMod.TabIndex = 18;
             this.chaMod.Text = "+0";
             // 
@@ -130,7 +132,7 @@
             this.intMod.AutoSize = true;
             this.intMod.Location = new System.Drawing.Point(96, 114);
             this.intMod.Name = "intMod";
-            this.intMod.Size = new System.Drawing.Size(19, 13);
+            this.intMod.Size = new System.Drawing.Size(24, 17);
             this.intMod.TabIndex = 17;
             this.intMod.Text = "+0";
             // 
@@ -139,7 +141,7 @@
             this.conMod.AutoSize = true;
             this.conMod.Location = new System.Drawing.Point(96, 88);
             this.conMod.Name = "conMod";
-            this.conMod.Size = new System.Drawing.Size(19, 13);
+            this.conMod.Size = new System.Drawing.Size(24, 17);
             this.conMod.TabIndex = 16;
             this.conMod.Text = "+0";
             // 
@@ -169,7 +171,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 62);
+            this.label7.Location = new System.Drawing.Point(10, 64);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 12;
@@ -181,7 +183,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(10, 88);
+            this.label6.Location = new System.Drawing.Point(10, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 11;
@@ -193,7 +195,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(10, 114);
+            this.label5.Location = new System.Drawing.Point(10, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 13);
             this.label5.TabIndex = 10;
@@ -205,7 +207,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 140);
+            this.label4.Location = new System.Drawing.Point(10, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 9;
@@ -217,7 +219,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 166);
+            this.label3.Location = new System.Drawing.Point(10, 168);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 8;
@@ -228,7 +230,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 36);
+            this.label2.Location = new System.Drawing.Point(10, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 7;
@@ -239,7 +241,7 @@
             // 
             this.dexUpDown.Location = new System.Drawing.Point(48, 60);
             this.dexUpDown.Name = "dexUpDown";
-            this.dexUpDown.Size = new System.Drawing.Size(33, 20);
+            this.dexUpDown.Size = new System.Drawing.Size(33, 23);
             this.dexUpDown.TabIndex = 6;
             this.dexUpDown.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
             // 
@@ -247,7 +249,7 @@
             // 
             this.conUpDown.Location = new System.Drawing.Point(48, 86);
             this.conUpDown.Name = "conUpDown";
-            this.conUpDown.Size = new System.Drawing.Size(33, 20);
+            this.conUpDown.Size = new System.Drawing.Size(33, 23);
             this.conUpDown.TabIndex = 5;
             this.conUpDown.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
             // 
@@ -255,7 +257,7 @@
             // 
             this.intUpDown.Location = new System.Drawing.Point(48, 112);
             this.intUpDown.Name = "intUpDown";
-            this.intUpDown.Size = new System.Drawing.Size(33, 20);
+            this.intUpDown.Size = new System.Drawing.Size(33, 23);
             this.intUpDown.TabIndex = 4;
             this.intUpDown.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
@@ -263,7 +265,7 @@
             // 
             this.wisUpDown.Location = new System.Drawing.Point(48, 138);
             this.wisUpDown.Name = "wisUpDown";
-            this.wisUpDown.Size = new System.Drawing.Size(33, 20);
+            this.wisUpDown.Size = new System.Drawing.Size(33, 23);
             this.wisUpDown.TabIndex = 3;
             this.wisUpDown.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
@@ -271,7 +273,7 @@
             // 
             this.chaUpDown.Location = new System.Drawing.Point(48, 164);
             this.chaUpDown.Name = "chaUpDown";
-            this.chaUpDown.Size = new System.Drawing.Size(33, 20);
+            this.chaUpDown.Size = new System.Drawing.Size(33, 23);
             this.chaUpDown.TabIndex = 2;
             this.chaUpDown.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
@@ -279,7 +281,7 @@
             // 
             this.strUpDown.Location = new System.Drawing.Point(48, 34);
             this.strUpDown.Name = "strUpDown";
-            this.strUpDown.Size = new System.Drawing.Size(33, 20);
+            this.strUpDown.Size = new System.Drawing.Size(33, 23);
             this.strUpDown.TabIndex = 1;
             this.strUpDown.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 

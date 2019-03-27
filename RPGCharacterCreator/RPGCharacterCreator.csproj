@@ -62,43 +62,19 @@
     <Compile Include="UI\PrimaryWindow.Designer.cs">
       <DependentUpon>PrimaryWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\RaceClassNameForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\RaceClassNameForm.Designer.cs">
-      <DependentUpon>RaceClassNameForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\RaceClassNameSelector.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\RaceClassNameSelector.Designer.cs">
       <DependentUpon>RaceClassNameSelector.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\ReviewCharacterForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\ReviewCharacterForm.Designer.cs">
-      <DependentUpon>ReviewCharacterForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="RPGClass.cs" />
-    <Compile Include="UI\StartupForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\StartupForm.Designer.cs">
-      <DependentUpon>StartupForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Stat.cs" />
     <Compile Include="UI\StatBlockSelector.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\StatBlockSelector.Designer.cs">
       <DependentUpon>StatBlockSelector.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\StatsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\StatsForm.Designer.cs">
-      <DependentUpon>StatsForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,23 +88,11 @@
     <EmbeddedResource Include="UI\PrimaryWindow.resx">
       <DependentUpon>PrimaryWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\RaceClassNameForm.resx">
-      <DependentUpon>RaceClassNameForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\RaceClassNameSelector.resx">
       <DependentUpon>RaceClassNameSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\ReviewCharacterForm.resx">
-      <DependentUpon>ReviewCharacterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\StartupForm.resx">
-      <DependentUpon>StartupForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\StatBlockSelector.resx">
       <DependentUpon>StatBlockSelector.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\StatsForm.resx">
-      <DependentUpon>StatsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

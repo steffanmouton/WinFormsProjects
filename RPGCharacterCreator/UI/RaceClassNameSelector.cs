@@ -93,6 +93,7 @@ namespace RPGCharacterCreator
             nameTextbox.Text = c.Name;
 
             raceDropdown.SelectedIndex = raceDropdown.FindString(c.CharRace.Name);
+            classDropdown.SelectedIndex = classDropdown.FindString(c.ClassImplementation.Name);
         }
 
 

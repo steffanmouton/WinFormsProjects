@@ -48,6 +48,7 @@
             this.charDetailsGroupBox.Controls.Add(this.nameLabel);
             this.charDetailsGroupBox.Controls.Add(this.classLabel);
             this.charDetailsGroupBox.Controls.Add(this.raceLabel);
+            this.charDetailsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.charDetailsGroupBox.Location = new System.Drawing.Point(3, 3);
             this.charDetailsGroupBox.Name = "charDetailsGroupBox";
             this.charDetailsGroupBox.Size = new System.Drawing.Size(194, 121);
@@ -58,9 +59,10 @@
             // 
             // nameTextbox
             // 
-            this.nameTextbox.Location = new System.Drawing.Point(48, 89);
+            this.nameTextbox.Location = new System.Drawing.Point(48, 20);
+            this.nameTextbox.MaxLength = 32;
             this.nameTextbox.Name = "nameTextbox";
-            this.nameTextbox.Size = new System.Drawing.Size(100, 20);
+            this.nameTextbox.Size = new System.Drawing.Size(121, 21);
             this.nameTextbox.TabIndex = 3;
             this.nameTextbox.TextChanged += new System.EventHandler(this.nameTextbox_TextChanged);
             // 
@@ -68,9 +70,9 @@
             // 
             this.classDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.classDropdown.FormattingEnabled = true;
-            this.classDropdown.Location = new System.Drawing.Point(48, 50);
+            this.classDropdown.Location = new System.Drawing.Point(48, 85);
             this.classDropdown.Name = "classDropdown";
-            this.classDropdown.Size = new System.Drawing.Size(121, 21);
+            this.classDropdown.Size = new System.Drawing.Size(121, 23);
             this.classDropdown.TabIndex = 2;
             this.classDropdown.SelectedIndexChanged += new System.EventHandler(this.classDropdown_SelectedIndexChanged);
             // 
@@ -78,18 +80,18 @@
             // 
             this.raceDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.raceDropdown.FormattingEnabled = true;
-            this.raceDropdown.Location = new System.Drawing.Point(48, 17);
+            this.raceDropdown.Location = new System.Drawing.Point(48, 52);
             this.raceDropdown.Name = "raceDropdown";
-            this.raceDropdown.Size = new System.Drawing.Size(121, 21);
+            this.raceDropdown.Size = new System.Drawing.Size(121, 23);
             this.raceDropdown.TabIndex = 1;
             this.raceDropdown.SelectedIndexChanged += new System.EventHandler(this.raceDropdown_SelectedIndexChanged);
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(7, 92);
+            this.nameLabel.Location = new System.Drawing.Point(6, 23);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(35, 13);
+            this.nameLabel.Size = new System.Drawing.Size(41, 15);
             this.nameLabel.TabIndex = 2;
             this.nameLabel.Text = "Name";
             this.myToolTip.SetToolTip(this.nameLabel, "Your character name. You know what a name is, right?");
@@ -97,9 +99,9 @@
             // classLabel
             // 
             this.classLabel.AutoSize = true;
-            this.classLabel.Location = new System.Drawing.Point(7, 53);
+            this.classLabel.Location = new System.Drawing.Point(7, 88);
             this.classLabel.Name = "classLabel";
-            this.classLabel.Size = new System.Drawing.Size(32, 13);
+            this.classLabel.Size = new System.Drawing.Size(37, 15);
             this.classLabel.TabIndex = 1;
             this.classLabel.Text = "Class";
             this.myToolTip.SetToolTip(this.classLabel, "Choose a class. This determines your skills as a professional adventurer.\r\nYour c" +
@@ -108,9 +110,9 @@
             // raceLabel
             // 
             this.raceLabel.AutoSize = true;
-            this.raceLabel.Location = new System.Drawing.Point(7, 20);
+            this.raceLabel.Location = new System.Drawing.Point(7, 55);
             this.raceLabel.Name = "raceLabel";
-            this.raceLabel.Size = new System.Drawing.Size(33, 13);
+            this.raceLabel.Size = new System.Drawing.Size(36, 15);
             this.raceLabel.TabIndex = 0;
             this.raceLabel.Text = "Race";
             this.myToolTip.SetToolTip(this.raceLabel, "Choose a character Race. This might define your character background,\r\nrelations " +

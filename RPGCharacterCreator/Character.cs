@@ -39,10 +39,10 @@ namespace RPGCharacterCreator
         /// Save function. Creates a save file for the character or updates it.
         /// </summary>
         /// <param name="fileName"></param>
-        public void Save(Character c, string fileName)
+        public void Save()
         {
-            string output = JsonConvert.SerializeObject(c);
-            File.WriteAllText(c.generateFileName(), output);
+            string output = JsonConvert.SerializeObject(this);
+            File.WriteAllText(this.generateFileName(), output);
         }
 
         public void Clear()
