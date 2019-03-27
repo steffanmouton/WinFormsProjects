@@ -27,6 +27,8 @@ namespace RPGCharacterCreator
                 return;
             if (dropdown != raceDropdown)
                 return;
+            if (dropdown.SelectedItem == null)
+                return;
 
             foreach (var race in SourceData.races)
             {
@@ -52,6 +54,9 @@ namespace RPGCharacterCreator
                 return;
 
             if (dropdown != classDropdown)
+                return;
+
+            if (dropdown.SelectedItem == null)
                 return;
 
             foreach (var thisClass in SourceData.classes)

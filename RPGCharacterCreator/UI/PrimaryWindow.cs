@@ -17,8 +17,7 @@ namespace RPGCharacterCreator.UI
         {
             InitializeComponent();
         }
-
-       
+        
         private void PrimaryWindow_Load(object sender, EventArgs e)
         {
             fullCharTitle.Text = Character.Instance.ReturnTitle();
@@ -32,6 +31,8 @@ namespace RPGCharacterCreator.UI
         {
             Character.Instance.Clear();
             raceClassNameSelector1.UpdateSelectorInfo();
+            statBlockGroupBox.UpdateStatBlockValues();
+            
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,6 +63,8 @@ namespace RPGCharacterCreator.UI
                 dialog.Dispose();
             }
 
+            raceClassNameSelector1.UpdateSelectorInfo();
+            statBlockGroupBox.UpdateStatBlockValues();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,12 +72,12 @@ namespace RPGCharacterCreator.UI
             Application.Exit();
         }
 
-        private void eToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exportButton_Click(object sender, EventArgs e)
         {
             Character.Instance.Save();
         }
 
-        private void exportButton_Click(object sender, EventArgs e)
+        private void exportAsJSONToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Character.Instance.Save();
         }

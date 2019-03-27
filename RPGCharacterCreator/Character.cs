@@ -11,6 +11,7 @@ namespace RPGCharacterCreator
     
     public sealed class Character
     {
+        [NonSerialized]
         public OnCharacterNameChanged onCharacterChanged;
 
         /// <summary>
