@@ -13,11 +13,20 @@ namespace RPGCharacterCreator.UI
 {
     public partial class PrimaryWindow : Form
     {
+        /// <summary>
+        /// Constructor for the form. NO TOUCH
+        /// </summary>
         public PrimaryWindow()
         {
             InitializeComponent();
         }
         
+        /// <summary>
+        /// On loading the window, set the title display to default. Also, instantiate
+        /// delegate to update title when character is changed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PrimaryWindow_Load(object sender, EventArgs e)
         {
             fullCharTitle.Text = Character.Instance.ReturnTitle();
@@ -27,6 +36,12 @@ namespace RPGCharacterCreator.UI
             
         }
 
+        /// <summary>
+        /// New character option. Clears the Character singleton, updates all text
+        /// on the form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Character.Instance.Clear();
@@ -35,6 +50,12 @@ namespace RPGCharacterCreator.UI
             
         }
 
+        /// <summary>
+        /// Load character option. Reads a JSON file and sets the character singleton
+        /// to the data therein. Updates all shown data on form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -67,16 +88,31 @@ namespace RPGCharacterCreator.UI
             statBlockGroupBox.UpdateStatBlockValues();
         }
 
+        /// <summary>
+        /// Exits the application entirely.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// Exports the Character as a JSON file, using character name as file name
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exportButton_Click(object sender, EventArgs e)
         {
             Character.Instance.Save();
         }
 
+        /// <summary>
+        /// Exports the Character as a JSON file, using character name as file name
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exportAsJSONToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Character.Instance.Save();

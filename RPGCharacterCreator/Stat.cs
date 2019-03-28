@@ -1,6 +1,9 @@
 ﻿
 namespace RPGCharacterCreator
 {
+    /// <summary>
+    /// Class containing the Statistic Data
+    /// </summary>
     public class Stat
     {
         private int _statistic;

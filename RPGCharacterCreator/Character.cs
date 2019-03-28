@@ -7,8 +7,15 @@ using RPGCharacterCreator.UI;
 // Singleton Character for app-wide access
 namespace RPGCharacterCreator
 {
+    /// <summary>
+    /// Delegate that is invoked in response to the Character being changed.
+    /// </summary>
+    /// <param name="c"></param>
     public delegate void OnCharacterNameChanged(Character c);
     
+    /// <summary>
+    /// Singleton class containing the data relevant to the Character
+    /// </summary>
     public sealed class Character
     {
         [NonSerialized]
@@ -46,9 +53,12 @@ namespace RPGCharacterCreator
             File.WriteAllText(this.generateFileName(), output);
         }
 
+        /// <summary>
+        /// Resets Character to default values, creating a "New" one.
+        /// </summary>
         public void Clear()
         {
-            Name = null;
+            Name = "___";
             CharRace = new Race();
             ClassImplementation = new RPGClass();
             foreach (var e in StatBlock)
@@ -128,6 +138,10 @@ namespace RPGCharacterCreator
             }
         }
 
+        /// <summary>
+        /// Returns a string built for use in saving
+        /// </summary>
+        /// <returns></returns>
         public string generateFileName()
         {
             string tempName = Name;
@@ -137,6 +151,10 @@ namespace RPGCharacterCreator
             return saveFileName;
         }
 
+        /// <summary>
+        /// Returns the full title of the character for display
+        /// </summary>
+        /// <returns></returns>
         public string ReturnTitle()
         {
             string _cName = "___", _cRace = "___", _cClass = "___";

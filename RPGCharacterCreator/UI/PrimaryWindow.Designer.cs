@@ -84,7 +84,7 @@
             // exportAsJSONToolStripMenuItem
             // 
             this.exportAsJSONToolStripMenuItem.Name = "exportAsJSONToolStripMenuItem";
-            this.exportAsJSONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportAsJSONToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportAsJSONToolStripMenuItem.Text = "&Export as JSON";
             this.exportAsJSONToolStripMenuItem.Click += new System.EventHandler(this.exportAsJSONToolStripMenuItem_Click);
             // 
@@ -118,7 +118,7 @@
             this.exportButton.Location = new System.Drawing.Point(403, 122);
             this.exportButton.Name = "exportButton";
             this.exportButton.Size = new System.Drawing.Size(162, 47);
-            this.exportButton.TabIndex = 4;
+            this.exportButton.TabIndex = 2;
             this.exportButton.Text = "Export Character";
             this.toolTip1.SetToolTip(this.exportButton, "Save the character as a JSON file, using the Character Name as the File Name.");
             this.exportButton.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             this.statBlockGroupBox.Location = new System.Drawing.Point(221, 56);
             this.statBlockGroupBox.Name = "statBlockGroupBox";
             this.statBlockGroupBox.Size = new System.Drawing.Size(142, 200);
-            this.statBlockGroupBox.TabIndex = 2;
+            this.statBlockGroupBox.TabIndex = 1;
             // 
             // raceClassNameSelector1
             // 

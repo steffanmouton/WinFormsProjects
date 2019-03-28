@@ -242,7 +242,7 @@
             this.dexUpDown.Location = new System.Drawing.Point(48, 60);
             this.dexUpDown.Name = "dexUpDown";
             this.dexUpDown.Size = new System.Drawing.Size(33, 23);
-            this.dexUpDown.TabIndex = 6;
+            this.dexUpDown.TabIndex = 1;
             this.dexUpDown.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
             // 
             // conUpDown
@@ -250,7 +250,7 @@
             this.conUpDown.Location = new System.Drawing.Point(48, 86);
             this.conUpDown.Name = "conUpDown";
             this.conUpDown.Size = new System.Drawing.Size(33, 23);
-            this.conUpDown.TabIndex = 5;
+            this.conUpDown.TabIndex = 2;
             this.conUpDown.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
             // 
             // intUpDown
@@ -258,7 +258,7 @@
             this.intUpDown.Location = new System.Drawing.Point(48, 112);
             this.intUpDown.Name = "intUpDown";
             this.intUpDown.Size = new System.Drawing.Size(33, 23);
-            this.intUpDown.TabIndex = 4;
+            this.intUpDown.TabIndex = 3;
             this.intUpDown.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
             // wisUpDown
@@ -266,7 +266,7 @@
             this.wisUpDown.Location = new System.Drawing.Point(48, 138);
             this.wisUpDown.Name = "wisUpDown";
             this.wisUpDown.Size = new System.Drawing.Size(33, 23);
-            this.wisUpDown.TabIndex = 3;
+            this.wisUpDown.TabIndex = 4;
             this.wisUpDown.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // chaUpDown
@@ -274,7 +274,7 @@
             this.chaUpDown.Location = new System.Drawing.Point(48, 164);
             this.chaUpDown.Name = "chaUpDown";
             this.chaUpDown.Size = new System.Drawing.Size(33, 23);
-            this.chaUpDown.TabIndex = 2;
+            this.chaUpDown.TabIndex = 5;
             this.chaUpDown.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // strUpDown
@@ -282,7 +282,7 @@
             this.strUpDown.Location = new System.Drawing.Point(48, 34);
             this.strUpDown.Name = "strUpDown";
             this.strUpDown.Size = new System.Drawing.Size(33, 23);
-            this.strUpDown.TabIndex = 1;
+            this.strUpDown.TabIndex = 0;
             this.strUpDown.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // StatBlockSelector

@@ -2,6 +2,9 @@
 
 namespace RPGCharacterCreator.UI
 {
+    /// <summary>
+    /// File Selector singleton. Keeps track of file path data as needed.
+    /// </summary>
     public sealed class FileSelector
     {
         private static FileSelector INSTANCE = new FileSelector();

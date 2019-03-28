@@ -63,7 +63,7 @@
             this.nameTextbox.MaxLength = 32;
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(121, 21);
-            this.nameTextbox.TabIndex = 3;
+            this.nameTextbox.TabIndex = 0;
             this.nameTextbox.TextChanged += new System.EventHandler(this.nameTextbox_TextChanged);
             // 
             // classDropdown

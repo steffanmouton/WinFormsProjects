@@ -101,7 +101,11 @@ namespace RPGCharacterCreator
             classDropdown.SelectedIndex = classDropdown.FindString(c.ClassImplementation.Name);
         }
 
-
+        /// <summary>
+        /// Race Class and Name all reflect current state of the character on loading form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RaceClassNameSelector_Load(object sender, EventArgs e)
         {
             var character = Character.Instance;
